@@ -108,10 +108,6 @@ defineProps({
                         </a>
                     </div>
                 </div>
-
-                <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                    Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})
-                </div>
             </div>
         </div>
     </div>
