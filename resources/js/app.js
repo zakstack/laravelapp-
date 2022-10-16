@@ -7,6 +7,22 @@ import { InertiaProgress } from '@inertiajs/progress';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 
+// General Font
+import 'vfonts/Lato.css'
+// Monospace Font
+import 'vfonts/FiraCode.css'
+
+import {
+    // create naive ui
+    create,
+    // component
+    NButton
+} from 'naive-ui'
+
+const naive = create({
+    components: [NButton]
+})
+
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
 createInertiaApp({
@@ -16,6 +32,7 @@ createInertiaApp({
         return createApp({ render: () => h(app, props) })
             .use(plugin)
             .use(ZiggyVue, Ziggy)
+            .use(naive)
             .mount(el);
     },
 });
